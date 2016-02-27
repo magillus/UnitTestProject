@@ -14,7 +14,7 @@ open class TestService {
         mockedVariable = false;
     }
 
-    fun shouldBeMockedMethod(): Boolean {
+    open fun shouldBeMockedMethod(): Boolean {
         Log.d(TAG, "Mocked method executed");
         throw Exception("Should not be executed");
         return mockedVariable;
