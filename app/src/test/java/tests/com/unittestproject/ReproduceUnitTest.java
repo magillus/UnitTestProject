@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.internal.util.MockUtil;
-import org.powermock.api.mockito.PowerMockito;
+//import org.powermock.api.mockito.PowerMockito;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -34,21 +34,21 @@ public class ReproduceUnitTest {
         Mockito.when(mockedService.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
         assertTrue(mockedService.shouldBeMockedMethod());
     }
-
-    @Test
-    public void testPowerMockitoService1() throws Exception {
-        TestService testService = PowerMockito.mock(TestService.class);
-        assertTrue(new MockUtil().isMock(testService));
-        PowerMockito.when(testService.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
-        assertTrue(testService.shouldBeMockedMethod());
-    }
-
-    @Test
-    public void testPowerMockitoService2() throws Exception {
-        TestService2 testService2 = PowerMockito.mock(TestService2.class);
-        assertTrue(new MockUtil().isMock(testService2));
-        PowerMockito.when(testService2.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
-        assertTrue(testService2.shouldBeMockedMethod());
-    }
+//
+//    @Test
+//    public void testPowerMockitoService1() throws Exception {
+//        TestService testService = PowerMockito.mock(TestService.class);
+//        assertTrue(new MockUtil().isMock(testService));
+//        PowerMockito.when(testService.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
+//        assertTrue(testService.shouldBeMockedMethod());
+//    }
+//
+//    @Test
+//    public void testPowerMockitoService2() throws Exception {
+//        TestService2 testService2 = PowerMockito.mock(TestService2.class);
+//        assertTrue(new MockUtil().isMock(testService2));
+//        PowerMockito.when(testService2.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
+//        assertTrue(testService2.shouldBeMockedMethod());
+//    }
 
 }
