@@ -23,7 +23,7 @@ public class ReproduceUnitTest {
     public void testMockitoService1() throws Exception {
         TestService mockedService = Mockito.mock(TestService.class);
         assertTrue(new MockUtil().isMock(mockedService));
-        PowerMockito.when(mockedService.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
+        Mockito.when(mockedService.shouldBeMockedMethod()).thenReturn(Boolean.TRUE);
         assertTrue(mockedService.shouldBeMockedMethod());
     }
 
